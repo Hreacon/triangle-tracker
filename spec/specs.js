@@ -11,4 +11,7 @@ describe('triangleTracker', function() {
   it("is not a triangle if two sides are equal to or less than the third side", function(){
     expect(triangleTracker(40, 50, 100)).to.equal('not a triangle');
   })
+  it("is false if input is a string", function() {
+    expect(triangleTracker('this','is','text')).to.equal('false');
+  })
 });
