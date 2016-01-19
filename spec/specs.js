@@ -20,4 +20,7 @@ describe('triangleTracker', function() {
   it("is false if no numbers are added to any input field", function() {
     expect(triangleTracker("", "", "")).to.equal(false);
   });
+  it("is false if symbols are added into any input field", function() {
+    expect(triangleTracker("#$%", "#$#", "@#*")).to.equal(false);
+  });
 });
