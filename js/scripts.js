@@ -19,3 +19,13 @@ var triangleTracker=function(side1, side2, side3){
   }
   return output;
 }
+
+$(document).ready(function() {
+  // get the input
+  var side1=$("#side1").val();
+  var side2=$("side2").val();
+  var side3=$("side3").val();
+  // put the input into triangleTracker
+  // show the output or error
+
+});
