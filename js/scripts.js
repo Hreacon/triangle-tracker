@@ -14,5 +14,8 @@ var triangleTracker=function(side1, side2, side3){
   if(isNaN(side1) || isNaN(side2) || isNaN(side3)) {
     output = false;
   }
+  if(side1 <= 0 || side2 <= 0 || side3 <= 0) {
+    output = false;
+  }
   return output;
 }
