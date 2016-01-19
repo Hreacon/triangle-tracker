@@ -21,11 +21,20 @@ var triangleTracker=function(side1, side2, side3){
 }
 
 $(document).ready(function() {
-  // get the input
-  var side1=$("#side1").val();
-  var side2=$("side2").val();
-  var side3=$("side3").val();
-  // put the input into triangleTracker
-  // show the output or error
-
+  $("#form1").submit(function(event) {
+    // get the input
+    var side1=parseInt($("#side1").val());
+    var side2=parseInt($("#side2").val());
+    var side3=parseInt($("#side3").val());
+    // put the input into triangleTracker
+    var result=triangleTracker(side1, side2, side3);
+    if (result === false) {
+      $(".error").show();
+    } else {
+      $(".triangle").text(result);
+      $(".output").show();
+    }
+    // show the output or error
+    event.preventDefault();
+  });
 });
