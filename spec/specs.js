@@ -3,7 +3,7 @@ describe('triangleTracker', function() {
     expect(triangleTracker(100, 100, 100)).to.equal('equilateral');
   });
   it("is isosceles if two inputs are the same", function() {
-    expect(triangleTracker(100, 50, 50)).to.equal('isosceles');
+    expect(triangleTracker(90, 50, 50)).to.equal('isosceles');
   });
   it("is scalene if no sides are the same", function() {
     expect(triangleTracker(40, 50, 60)).to.equal('scalene');
