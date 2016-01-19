@@ -17,4 +17,7 @@ describe('triangleTracker', function() {
   it("is flase of input is a negative number", function() {
     expect(triangleTracker(-40, 50, 60)).to.equal(false);
   });
+  it("is false if no numbers are added to any input field", function() {
+    expect(triangleTracker("", "", "")).to.equal(false);
+  });
 });
